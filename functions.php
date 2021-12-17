@@ -87,3 +87,12 @@ function understrap_child_customize_controls_js() {
 	);
 }
 add_action( 'customize_controls_enqueue_scripts', 'understrap_child_customize_controls_js' );
+
+function register_footer_menu() {
+	register_nav_menus(
+	  array(
+		 'footer-menu' => __( 'Footer Menu' )
+	   )
+	 );
+   }
+   add_action( 'init', 'register_footer_menu' );

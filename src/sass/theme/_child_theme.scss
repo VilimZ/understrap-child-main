@@ -1,0 +1,36 @@
+body.home{
+    overflow-y: hidden;
+}
+
+/************************************************ Header */ 
+
+.bg-primary {
+    background-color: transparent !important;
+}
+.navbar-nav, .nav-link, .navbar-dark {
+    color: whitesmoke !important;
+}
+
+
+/************************************************* Content */
+.wpe-content {
+    min-height:85vh;
+} 
+
+
+
+
+
+/************************************************* Footer  */
+.site-footer .wpe-footer a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+#footer-menu  {
+    display: flex;
+    color: whitesmoke;
+    list-style: none;
+}
+#footer-menu li {
+    padding-right: 10px;
+}

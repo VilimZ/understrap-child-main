@@ -19,7 +19,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 ?>
 
-<div class="wrapper" id="page-wrapper">
+<div id="wpe-hero-content-title" class="wpe-content wpe-hero" >
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
@@ -36,9 +36,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 					get_template_part( 'loop-templates/content', 'page' );
 
 					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) {
-						comments_template();
-					}
+					//if ( comments_open() || get_comments_number() ) {
+					//	comments_template();
+					//}
 				}
 				?>
 
