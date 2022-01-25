@@ -15,43 +15,31 @@ defined( 'ABSPATH' ) || exit;
 
 get_header();
 
-$container = get_theme_mod( 'understrap_container_type' );
+//$container = get_theme_mod( 'understrap_container_type' );
 
 ?>
 
-<div id="wpe-hero-content-title" class="wpe-content wpe-hero" >
+<div class="front-container">
+      
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
-		<div class="row">
+      <div id="theme-right-container" class="">
+        <div class="theme-right"><img src="<?php echo get_theme_file_uri('/media/theme-ico-left.png') ?>"></div>
+      </div>
 
-			<!-- Do the left sidebar check -->
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
+      <div id="plugin-left-container" class="">
+        <div class="plugin-left"><img src="<?php echo get_theme_file_uri( '/media/theme-ico-right-down.png' ) ?>"></div>
+      </div>
 
-			<main class="site-main" id="main">
+      <div id="theme-left-container" class="">
+        <div class="theme-left"><img src="<?php echo get_theme_file_uri('/media/plugin-ico-left2.png') ?>"> </div>
+      </div>
 
-				<?php
-				while ( have_posts() ) {
-					the_post();
-					get_template_part( 'loop-templates/content', 'page' );
+      <div id="plugin-right-container" class="">
+        <div class="plugin-right"><img src="<?php echo get_theme_file_uri('/media/plugin-ico-right-down2.png') ?>"> </div>
+      </div>
 
-					// If comments are open or we have at least one comment, load up the comment template.
-					//if ( comments_open() || get_comments_number() ) {
-					//	comments_template();
-					//}
-				}
-				?>
-
-			</main><!-- #main -->
-
-			<!-- Do the right sidebar check -->
-			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
-
-		</div><!-- .row -->
-
-	</div><!-- #content -->
-
-</div><!-- #page-wrapper -->
+    </div>
 
 <?php
 get_footer();

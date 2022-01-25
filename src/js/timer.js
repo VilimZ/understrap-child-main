@@ -1,6 +1,3 @@
-// Add your custom JS here.
-
-
 /* Script that periodically lunch animated elements */
 
 let repiteAnimations = setInterval(sequenceSwithcer, 10000);

@@ -1,6 +1,9 @@
 body.home{
     overflow-y: hidden;
 }
+.bs-body-color {
+color: navajowhite
+}
 
 /************************************************ Header */ 
 
@@ -15,22 +18,12 @@ body.home{
 /************************************************* Content */
 .wpe-content {
     min-height:85vh;
+    color:navajowhite !important;
 } 
 
+@import "./wpe_front_page";
+@import "./wpe_footer";
 
 
 
 
-/************************************************* Footer  */
-.site-footer .wpe-footer a {
-    color: whitesmoke;
-    text-decoration: none;
-}
-#footer-menu  {
-    display: flex;
-    color: whitesmoke;
-    list-style: none;
-}
-#footer-menu li {
-    padding-right: 10px;
-}

@@ -1,6 +1,6 @@
 /*!
   * Understrap v1.1.0 (https://understrap.com)
-  * Copyright 2013-2021 The Understrap Authors (https://github.com/understrap/understrap/graphs/contributors)
+  * Copyright 2013-2022 The Understrap Authors (https://github.com/understrap/understrap/graphs/contributors)
   * Licensed under GPL (http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
   */
 (function (global, factory) {
@@ -9295,6 +9295,61 @@
 	    }, false);
 	  }
 	})();
+
+	// Add your custom JS here.
+
+	/* Script that periodically lunch animated elements */
+	setInterval(sequenceSwithcer, 10000);
+
+	function sequenceSwithcer() {
+	  function sequenceIcon1() {
+	    let x = document.getElementById("theme-left-container");
+	    x.className = "theme-left-container";
+
+	    function reset() {
+	      x.className = "x";
+	    }
+
+	    setTimeout(reset, 8000);
+	  }
+
+	  function sequenceIcon2() {
+	    let x = document.getElementById("theme-right-container");
+	    x.className = "theme-right-container";
+
+	    function reset() {
+	      x.className = "x";
+	    }
+
+	    setTimeout(reset, 8000);
+	  }
+
+	  function sequenceIcon3() {
+	    let x = document.getElementById("plugin-left-container");
+	    x.className = "plugin-left-container";
+
+	    function reset() {
+	      x.className = "x";
+	    }
+
+	    setTimeout(reset, 8000);
+	  }
+
+	  function sequenceIcon4() {
+	    let x = document.getElementById("plugin-right-container");
+	    x.className = "plugin-right-container";
+
+	    function reset() {
+	      x.className = "x";
+	    }
+
+	    setTimeout(reset, 8000);
+	  }
+
+	  let sequenceArray = [sequenceIcon1, sequenceIcon2, sequenceIcon3, sequenceIcon4];
+	  let i = Math.floor(Math.random() * sequenceArray.length);
+	  sequenceArray[i]();
+	}
 
 	exports.Alert = alert;
 	exports.Button = button;
